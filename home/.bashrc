@@ -133,6 +133,7 @@ alias le="less "
 alias l-c="ssh -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30 zchen@login.clsp.jhu.edu"
 export PATH=$PATH:~/bin
 alias c-c="cd /mnt/homedir/chenzhehuai/works/e2e/codes"
+alias c-w="cd /mnt/homedir/chenzhehuai/works/e2e/egs/partlibrispeech/asr1"
 
 export no_proxy=".fbcdn.net,.facebook.com,.thefacebook.com,.tfbnw.net,.fb.com,.fburl.com,.facebook.net,.sb.fbsbx.com,localhost"
 export http_proxy=fwdproxy:8080
@@ -144,3 +145,8 @@ export PATH="/mnt/homedir/chenzhehuai/miniconda3/bin:$PATH"
 alias sn="screen"
 alias sr="screen -r"
 alias wns="watch -n 1 nvidia-smi"
+
+alias l-197="ssh devgpu197.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
+alias l-199="ssh devgpu199.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
+alias l-211="ssh devgpu211.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
+ 

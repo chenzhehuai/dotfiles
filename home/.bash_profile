@@ -1,5 +1,8 @@
 # .bash_profile
 
+[ "$TERM" = "nuclide" ] && return;
+
+
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
