@@ -148,8 +148,11 @@ alias sn="screen"
 alias sr="screen -r"
 alias wns="watch -n 1 nvidia-smi"
 
+<<<<<<< HEAD
 alias l-252="ssh devgpu252.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
 alias l-193="ssh devgpu193.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
+=======
+>>>>>>> d25e334c1b32aefec1b38b1067a060d9a0bd9ec9
 alias l-197="ssh devgpu197.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
 alias l-199="ssh devgpu199.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
 alias l-211="ssh devgpu211.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
