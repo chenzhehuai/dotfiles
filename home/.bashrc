@@ -137,23 +137,12 @@ alias c-w="cd /mnt/homedir/chenzhehuai/works/e2e/egs/partlibrispeech/asr1"
 alias c-f="cd ~/local/fbsource/fbcode/"
 alias c-g="cd /mnt/vol/gfsai-east/langtech/users/chenzhehuai/works/e2e/egs/partlibrispeech/asr1"
 
-export no_proxy=".fbcdn.net,.facebook.com,.thefacebook.com,.tfbnw.net,.fb.com,.fburl.com,.facebook.net,.sb.fbsbx.com,localhost"
-export http_proxy=fwdproxy:8080
-export https_proxy=fwdproxy:8080
-
-
 # added by Miniconda3 installer
 export PATH="/mnt/homedir/chenzhehuai/miniconda3/bin:$PATH"
 alias sn="screen"
 alias sr="screen -r"
 alias wns="watch -n 1 nvidia-smi"
 
-<<<<<<< HEAD
-alias l-252="ssh devgpu252.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
-alias l-193="ssh devgpu193.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
-=======
->>>>>>> d25e334c1b32aefec1b38b1067a060d9a0bd9ec9
-alias l-197="ssh devgpu197.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
-alias l-199="ssh devgpu199.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
 alias l-211="ssh devgpu211.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
+alias l-clsp="ssh zchen@login.clsp.jhu.edu -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=1"
  
