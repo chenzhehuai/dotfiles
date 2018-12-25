@@ -1,3 +1,5 @@
 [user]
 	email = chenzhehuai@foxmail.com
 	name = chenzhehuai
+[credential]
+	helper = store
