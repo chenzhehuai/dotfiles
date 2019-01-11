@@ -40,12 +40,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -137,23 +137,29 @@ alias c-w="cd /mnt/homedir/chenzhehuai/works/e2e/egs/partlibrispeech/asr1"
 alias c-f="cd ~/local/fbsource/fbcode/"
 alias c-g="cd /mnt/vol/gfsai-east/langtech/users/chenzhehuai/works/e2e/egs/partlibrispeech/asr1"
 
-export no_proxy=".fbcdn.net,.facebook.com,.thefacebook.com,.tfbnw.net,.fb.com,.fburl.com,.facebook.net,.sb.fbsbx.com,localhost"
-export http_proxy=fwdproxy:8080
-export https_proxy=fwdproxy:8080
-
-
 # added by Miniconda3 installer
 export PATH="/mnt/homedir/chenzhehuai/miniconda3/bin:$PATH"
 alias sn="screen"
 alias sr="screen -r"
 alias wns="watch -n 1 nvidia-smi"
 
-<<<<<<< HEAD
-alias l-252="ssh devgpu252.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
-alias l-193="ssh devgpu193.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
-=======
->>>>>>> d25e334c1b32aefec1b38b1067a060d9a0bd9ec9
-alias l-197="ssh devgpu197.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
-alias l-199="ssh devgpu199.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
 alias l-211="ssh devgpu211.prn2  -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=30"
- 
+alias l-clsp="ssh zchen@login.clsp.jhu.edu -o StrictHostKeyChecking=no -o TCPKeepAlive=yes -o ServerAliveInterval=1"
+
+IPADDRS=`/sbin/ifconfig | grep -P -o "((eth[\w:]+)|(addr:[\d.]+)|(lo[\d:]*))" | perl -e '%face;foreach (<STDIN>){$int=$1 if (/((?:(?:eth)|(?:lo))[\d:]*)/);$face{$int}=$1 if (/addr:([\d.]+)/);};foreach $interf (sort keys %face){print "$interf = $face{$interf}\t" if ($interf !~ /^lo$/)}'`
+
+export MKLROOT=/mnt/lustre/aifs/home/pz853/workspace/intel #/opt/intel
+export INTELROOT=$MKLROOT
+export PATH=${PATH}:$MKLROOT/composerxe/pkg_bin/intel64
+#export PATH=${PATH}:${MYHOME}/workspace/intel/bin/
+export LD_LIBRARY_PATH=/usr/lib64:/usr/local/lib/:$MKLROOT/ism/bin/intel64:/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+source ${MKLROOT}/composerxe/bin/compilervars.sh intel64
+
+alias c-a="cd /mnt/lustre/aifs/users/zhc01/"
+alias dcpu="srun -p cpu   --mem=30G  --ntasks-per-node 1 --pty /bin/bash -i"
+alias dgpu="srun -p gpu --gres=gpu:1   --mem=30G --ntasks-per-node 1 --pty /bin/bash -i"
+module add cmake/3.12.0
+alias gt="git"
+
+. /mnt/lustre/aifs/users/zhc01/codes/miniconda3/etc/profile.d/conda.sh
+export PATH=/mnt/lustre/aifs/users/zhc01/codes/miniconda3/bin:$PATH
