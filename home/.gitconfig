@@ -1,5 +1,22 @@
 [user]
-	email = chenzhehuai@foxmail.com
-	name = chenzhehuai
+	email = chenzhehuai.sjtu@aispeech.com
+	name = Zhehuai Chen
+[alias]
+  st = status
+  df = diff
+  co = checkout
+  ci = commit
+  br = branch
+  rb = rebase
+  pr = remote prune
+  l0 = log --color --graph --decorate --pretty=oneline --abbrev-commit --date-order
+  l1 = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=
+ve
+  l2 = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -
+relative
+
+[color]
+  ui = true
+
 [credential]
 	helper = store

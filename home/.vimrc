@@ -38,7 +38,7 @@ set nu              " 显示行号
 set showcmd         " 显示命令
 set lz              " 当运行宏时，在命令执行完成之前，不重绘屏幕
 set hid             " 可以在没有保存的情况下切换buffer
-set backspace=eol,start,indent 
+set backspace=eol,start,indent
 set whichwrap+=<,>,h,l " 退格键和方向键可以换行
 set incsearch       " 增量式搜索
 set hlsearch        " 高亮搜索
@@ -51,7 +51,7 @@ set lbr             " 在breakat字符处而不是最后一个字符处断行
 set ai              " 自动缩进
 set si              " 智能缩进
 set cindent         " C/C++风格缩进
-set wildmenu        
+set wildmenu
 set nofen
 set fdl=10
 set sw=2
@@ -195,7 +195,7 @@ let s:PlugWinSize = 30
 nmap <silent> <leader>t :TlistToggle<cr>
 "let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 0
-let Tlist_Exit_OnlyWindow = 1 
+let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_GainFocus_On_ToggleOpen = 0
@@ -212,11 +212,11 @@ let Tlist_Display_Prototype = 0
 " OmniCppComplete.vim
 " http://www.vim.org/scripts/script.php?script_id=1520
 set completeopt=menu
-let OmniCpp_ShowPrototypeInAbbr = 1 
+let OmniCpp_ShowPrototypeInAbbr = 1
 let OmniCpp_DefaultNamespaces = ["std"]     " 逗号分割的字符串
-let OmniCpp_MayCompleteScope = 1 
-let OmniCpp_ShowPrototypeInAbbr = 0 
-let OmniCpp_SelectFirstItem = 2 
+let OmniCpp_MayCompleteScope = 1
+let OmniCpp_ShowPrototypeInAbbr = 0
+let OmniCpp_SelectFirstItem = 2
 " c-j自动补全，当补全菜单打开时，c-j,k上下选择
 imap <expr> <c-j>      pumvisible()?"\<C-N>":"\<C-X><C-O>"
 imap <expr> <c-k>      pumvisible()?"\<C-P>":"\<esc>"
@@ -224,7 +224,7 @@ imap <expr> <c-k>      pumvisible()?"\<C-P>":"\<esc>"
 imap <C-]>             <C-X><C-]>
 imap <C-F>             <C-X><C-F>
 imap <C-D>             <C-X><C-D>
-imap <C-L>             <C-X><C-L> 
+imap <C-L>             <C-X><C-L>
 
 " NERD_commenter.vim
 " http://www.vim.org/scripts/script.php?script_id=1218
@@ -238,7 +238,7 @@ map <leader>cu ,cu
 " http://www.vim.org/scripts/script.php?script_id=1658
 let NERDTreeShowHidden = 1
 let NERDTreeWinPos = "right"
-let NERDTreeWinSize = s:PlugWinSize 
+let NERDTreeWinSize = s:PlugWinSize
 nmap <leader>n :NERDTreeToggle<cr>
 
 " DoxygenToolkit.vim
@@ -253,14 +253,14 @@ function! Do_CsTag()
     let dir = getcwd()
 
     "先删除已有的tags和cscope文件，如果存在且无法删除，则报错。
-    if ( DeleteFile(dir, "tags") ) 
-        return 
+    if ( DeleteFile(dir, "tags") )
+        return
     endif
-    if ( DeleteFile(dir, "cscope.files") ) 
-        return 
+    if ( DeleteFile(dir, "cscope.files") )
+        return
     endif
-    if ( DeleteFile(dir, "cscope.out") ) 
-        return 
+    if ( DeleteFile(dir, "cscope.out") )
+        return
     endif
 
     if(executable('ctags'))
@@ -357,7 +357,7 @@ function! LookupFile_IgnoreCaseFunc(pattern)
     let files = map(tags, 'v:val["filename"]')
     return files
 endfunction
-let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc' 
+let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc'
 
 " Buffers Explorer （需要genutils.vim）
 " http://vim.sourceforge.net/scripts/script.php?script_id=42
@@ -375,3 +375,4 @@ autocmd FileWritePre,BufWritePre * ks|call Backfun()|'s
 fun Backfun()
     !tail -n 500 % > /tmp/`basename %`_`date +\%s`
 endfun
+
