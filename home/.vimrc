@@ -240,6 +240,7 @@ let NERDTreeShowHidden = 1
 let NERDTreeWinPos = "right"
 let NERDTreeWinSize = s:PlugWinSize 
 nmap <leader>n :NERDTreeToggle<cr>
+let NERDTreeShowBookmarks=1
 
 " DoxygenToolkit.vim
 " http://www.vim.org/scripts/script.php?script_id=987
@@ -375,3 +376,9 @@ autocmd FileWritePre,BufWritePre * ks|call Backfun()|'s
 fun Backfun()
     !tail -n 500 % > /tmp/`basename %`_`date +\%s`
 endfun
+set cursorcolumn
+set cursorline
+highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+
+execute pathogen#infect()
+
